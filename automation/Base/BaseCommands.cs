@@ -9,6 +9,19 @@ namespace Automation.Base
 {
   public abstract class BaseCommands
   {
+    public static GoTo()
+    {
+      try
+      {
+        driver = new ChromeDriver();
+        driver.Navigate.GoTo("https://sampleapp.tricentis.com/101/app.php");
+      }
+      catch (Exception e)
+      {
+        throw new Exception($"Erro ao abrir ChromeDriver.\n{e.Message}")
+      }
+    }
+
     public void SelectList(By by, string option)
     {
       try
@@ -30,5 +43,9 @@ namespace Automation.Base
     {
       driver.FindElement(by).sendKeys(text);
     }
+    catch (Exception e)
+      {
+        throw new Exception($"Erro digitar texto({by.ToString()}).\n{e.Message}")
+      }
   }
 }

@@ -17,8 +17,7 @@ namespace Automation.BDD.Steps
     [Given(@"Estou na pagina esperada")]
     public void EstouNaPaginaEsperada()
     {
-      driver = new ChromeDriver();
-      driver.Navigate.GoTo("https://sampleapp.tricentis.com/101/app.php");
+      commands.GoTo();
     }
 
     [When(@"Eu preencher os campos primeiros 4 campos")]
