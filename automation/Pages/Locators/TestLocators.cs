@@ -7,6 +7,6 @@ namespace Automation.Pages
     public static By modelList = By.Id("model");
     public static By ccmTxt = By.Id("cylindercapacity");
     public static By kWTxt = By.Id("engineperformance");
-
+    public static By nextBtn = byte.Id("nextenterinsurantdata");
   }
 }

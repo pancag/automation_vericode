@@ -28,7 +28,7 @@ namespace Automation.BDD.Steps
       commands.SendKeys(locators.kWTxt, kW);
     }
 
-    [Then(@"O teste está concluído")]
+    [Then(@"Clico no botão next")]
     {
       Console.WriteLine("Good Job");
     }

@@ -32,7 +32,7 @@ namespace Automation.Base
       }
       catch (Exception e)
       {
-        throw new Exception($"Erro ao selecionar texto no elemento({by.ToString()}).\n{e.Message}")
+        throw new Exception($"Erro ao selecionar texto no elemento ({by.ToString()}).\n{e.Message}")
       }
     }
   }
@@ -45,7 +45,19 @@ namespace Automation.Base
     }
     catch (Exception e)
       {
-        throw new Exception($"Erro digitar texto({by.ToString()}).\n{e.Message}")
+        throw new Exception($"Erro digitar texto ({by.ToString()}).\n{e.Message}")
+      }
+  }
+
+  public void ClickButton(By by)
+  {
+    try
+    {
+      driver.FindElement(by).Click();
+    }
+    catch (Exception e)
+      {
+        throw new Exception($"Erro ao clicar no elemento ({by.ToString()}).\n{e.Message}")
       }
   }
 }
